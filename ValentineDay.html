@@ -48,7 +48,10 @@
 
 		.love-text span {
 		  display: inline-block;
-		  animation: pulse 1s ease-in-out infinite;
+		  white-space: nowrap;
+		  overflow: hidden;
+		  animation: move 10s linear infinite alternate;
+		  font-size: 48px;
 		}
 
 		@keyframes pulse {
@@ -67,8 +70,11 @@
 		  0% {
 			transform: translateX(-100%);
 		  }
-		  100% {
+		  50% {
 			transform: translateX(100%);
+		  }
+		  100% {
+			transform: translateX(-100%);
 		  }
 		}
 	</style>
